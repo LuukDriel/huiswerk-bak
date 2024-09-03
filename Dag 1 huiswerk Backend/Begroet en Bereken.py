@@ -15,7 +15,3 @@ Leeftijd = input("wat is je leeftijd? ")
 
 #voert functie uit
 berekenLeeftijd()
-
-Leeftijd = "51"
-
-berekenLeeftijd()
