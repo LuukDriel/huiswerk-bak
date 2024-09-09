@@ -10,16 +10,20 @@ def Rekenmachine():
 
     #Plus
     if operatie == "+":
-        print(getal1 + getal2)
+        Antwoord = getal1 + getal2
+        print(f"de som van {getal1} en {getal2} = {Antwoord}")
     elif operatie == "-":
         #Min
-        print(getal1 - getal2)
+        Antwoord = getal1 - getal2
+        print(f"het verschil van {getal1} en {getal2} = {Antwoord}")
     elif operatie == "*":
         #Keer
-        print(getal1 * getal2)
+        Antwoord = getal1 * getal2
+        print(f"de product van {getal1} en {getal2} = {Antwoord}")
     elif operatie == "/":
-        #Gedeeld door4
-        print(getal1 / getal2)
+        #Gedeeld door
+        Antwoord = getal1 / getal2
+        print(f"de quotiënt van {getal1} en {getal2} = {Antwoord}")
     else:
         print("kies een gelidige operatie")
         Rekenmachine()
