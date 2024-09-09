@@ -25,6 +25,7 @@ def Rekenmachine():
         Antwoord = getal1 / getal2
         print(f"de quotiënt van {getal1} en {getal2} = {Antwoord}")
     else:
+        #Start opnieuw
         print("kies een gelidige operatie")
         Rekenmachine()
 
