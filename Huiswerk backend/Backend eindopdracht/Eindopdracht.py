@@ -27,7 +27,7 @@ def Rekenmachine():
         print(f"de quotiënt van {getal1} en {getal2} = {Antwoord}\n")
     else:
         #Start opnieuw
-        print("kies een gelidige operatie")
+        print("kies een geledige operatie")
         Rekenmachine()
 
 def Info_invoeren():

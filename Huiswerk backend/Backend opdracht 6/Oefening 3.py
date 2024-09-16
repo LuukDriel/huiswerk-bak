@@ -1,5 +1,8 @@
-def Bereken_oppervlakte(Lengte, Breedte):
-    oppervlakte = Lengte * Breedte
+def Bereken_oppervlakte(lengte, breedte):
+    oppervlakte = lengte * breedte
     return oppervlakte
 
-Resultaat = Bereken_oppervlakte(int(input("voer lengte in\n")), int(input("voer breedte in\n")))
+lengte = int(input("voer lengte in\n"))
+breedte = int(input("voer breedte in\n"))
+
+print(f"de oppervlakte is {Bereken_oppervlakte(lengte, breedte)}")
