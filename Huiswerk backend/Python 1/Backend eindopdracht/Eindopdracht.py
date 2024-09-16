@@ -2,33 +2,35 @@ def Begroeting():
     naam = input("Hallo, welkom bij mijn chatbot. Wat is jouw naam \n")
     print(f"Leuk je te ontmoeten {naam}! wat wil je doen? \n")
 
+
 def Rekenmachine():
 
     getal1 = int(input("voer een getal in \n"))
     getal2 = int(input("voer een getal 2 in \n"))
 
-    operatie = input ("wat voor operatie wil je uitvoeren? \n + - * of / \n")
+    operatie = input("wat voor operatie wil je uitvoeren? \n + - * of / \n")
 
-    #Plus
+    # Plus
     if operatie == "+":
         Antwoord = getal1 + getal2
         print(f"de som van {getal1} en {getal2} = {Antwoord}\n")
     elif operatie == "-":
-        #Min
+        # Min
         Antwoord = getal1 - getal2
         print(f"het verschil van {getal1} en {getal2} = {Antwoord}\n")
     elif operatie == "*":
-        #Keer
+        # Keer
         Antwoord = getal1 * getal2
         print(f"de product van {getal1} en {getal2} = {Antwoord}\n")
     elif operatie == "/":
-        #Gedeeld door
+        # Gedeeld door
         Antwoord = getal1 / getal2
         print(f"de quotiënt van {getal1} en {getal2} = {Antwoord}\n")
     else:
-        #Start opnieuw
+        # Start opnieuw
         print("kies een geledige operatie")
         Rekenmachine()
+
 
 def Info_invoeren():
     global De_lijst
@@ -42,6 +44,7 @@ def Info_invoeren():
 
     De_lijst = temp_lijst
 
+
 def Info_kijken():
     try:
         nummer = 1
@@ -54,6 +57,7 @@ def Info_kijken():
     Chatbot()
 
     print("\n")    
+
 
 def Chatbot():
 
@@ -76,6 +80,7 @@ def Chatbot():
     else:
         print("Kies een geldige keuze\n")
         Chatbot()
+
 
 Begroeting()
 

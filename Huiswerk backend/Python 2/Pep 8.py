@@ -1,2 +1,0 @@
-def bereken_faculteit():
-    
