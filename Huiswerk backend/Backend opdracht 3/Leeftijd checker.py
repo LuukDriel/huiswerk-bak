@@ -6,7 +6,6 @@ def Leeftijdchecker():
     else:
         print("je bent senior")
 
-leeftijd = input("hoe oud ben je? \n")
-leeftijd = int(leeftijd)
+leeftijd = int(input("hoe oud ben je? \n"))
 
 Leeftijdchecker()

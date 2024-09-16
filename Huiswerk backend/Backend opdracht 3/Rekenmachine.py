@@ -1,9 +1,3 @@
-getal1 = input("voer een getal in \n")
-getal2 = input("voer een getal 2 in \n")
-
-getal1 = int(getal1)
-getal2 = int(getal2)
-
 def Rekenmachine():
 
     operatie = input ("wat voor operatie wil je uitvoeren? \n + - * of / \n")
@@ -28,5 +22,8 @@ def Rekenmachine():
         #Start opnieuw
         print("kies een gelidige operatie")
         Rekenmachine()
+
+getal1 = int(input("voer een getal in \n"))
+getal2 = int(input("voer een getal 2 in \n"))
 
 Rekenmachine()
