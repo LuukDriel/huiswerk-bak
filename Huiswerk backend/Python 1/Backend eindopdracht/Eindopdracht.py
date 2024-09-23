@@ -62,7 +62,6 @@ def Info_kijken():
 def Chatbot():
 
     functie = input("1. Begroeting \n2. Rekenkundige bewerkingen \n3. Persoonelijke informatie invoeren \n4. Informatie bekijken \n5. Afsluiten \nKies een optie (1-5) \n")
-    
     if functie == "1":
         Begroeting()
         Chatbot()
