@@ -1,0 +1,28 @@
+body {
+    background-color: beige;
+    
+}
+div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+p {
+    color: green;
+    text-align: center;
+}
+    
+table, th, td {
+    border: 1px solid black
+}
