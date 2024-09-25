@@ -1,28 +1,63 @@
-body {
-    background-color: beige;
-    
+.Voorpagina {
+    background-color: rgb(255, 206, 154);
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
 }
-div {
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 20px;
+
+.skill {
+    background-color: rgb(255, 206, 154);
+    width: auto;
+    height: 500px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
 }
-h1 {
-    color: blue;
-    text-align: center;
-}
-.center {
+
+.Aap {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    margin-left: 400px;
+    margin-right: 400px;
 }
-p {
-    color: green;
+
+.Titel {
     text-align: center;
+    color: rgb(0, 128, 87);
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-    
-table, th, td {
-    border: 1px solid black
+
+.Dit_ben_ik {
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.tabel {
+    color: cornflowerblue;
+    table,
+    th,
+    td {
+        border: 1px solid black
+    }
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: yellow;
 }
