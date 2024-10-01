@@ -1,0 +1,11 @@
+.parent{
+    display: flex;
+}
+
+.left{
+    display: 50%;
+}
+
+.right{
+    display: 50%;
+}
