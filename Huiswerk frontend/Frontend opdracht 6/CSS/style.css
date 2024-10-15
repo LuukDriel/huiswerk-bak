@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.container, .container-skills, .Container-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 180, 110);
+    width: 100%; /* Fill the entire screen width */
+    height: 600px;
+    padding: 20px;
+    border: 5px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* No rounded corners */
+    position: relative;
+}
+
+.foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    flex: 2;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.titel {
+    color: rgb(0, 128, 87);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.tekst {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Top navigation stays fixed at the top-left corner */
+ul {
+    list-style-type: none;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left */
+    width: auto; /* Auto width for left alignment */
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 180, 110);
+    width: 100%; /* Fill the entire screen width */
+    max-width: 100%; /* Ensure it doesn’t exceed 100% width */
+    margin: 50px 0;
+    padding: 20px;
+    border: 5px solid gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* No rounded corners */
+}
+
+.skill-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+.skill-link:hover, .link:hover {
+    color: green;
+}
+
+.titel {
+    color: rgb(0, 128, 87);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+.tabel {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: rgb(255, 206, 154);
+    color: black;
+}
+
+textarea, input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+input[type=submit] {
+    width: 100%;
+    max-width: 500px;
+    padding: 25px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: green;
+    margin-bottom: 20px;
+    resize: none;
+    border-radius: 12px;
+}
+
+.contact {
+    display: flex;
+    justify-content: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container, .container-skills, .Container-contact {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .foto img {
+        width: 150px;
+    }
+
+    .titel {
+        font-size: 2rem;
+    }
+
+    .skill {
+        padding: 20px;
+    }
+
+    .skill-link {
+        position: absolute;
+    }
+}
