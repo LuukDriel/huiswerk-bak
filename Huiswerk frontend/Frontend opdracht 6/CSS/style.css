@@ -76,7 +76,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover, .active a {
+.active a {
+    background-color: lightslategrey;
+}
+
+li a:hover {
     background-color: #111;
 }
 

@@ -1,0 +1,59 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  rgb(161, 161, 161);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+ul {
+    list-style-type: none;
+    background-color: rgb(102, 102, 102);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    display: inline;
+    float: left;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li a:hover {
+    background-color: rgb(139, 139, 139);
+}
+
+a {
+    display: block;
+    padding: 8px;
+
+    text-align: center;
+}
+
+.active-home {
+    background-color: rgb(102, 102, 102);
+    color: white;
+}
+
+.Home-container {
+    display: flex;
+    justify-items: center;
+    align-content: space-between;
+    width: 88%;
+    height: 100%;
+}
+
+.pasfoto {
+    justify-content:
+}
+
+.Info {
+    flex: auto;
+    background-color: lightgray;
+    width: 200px;
+    padding: 50px;
+    margin: 20px;
+}
