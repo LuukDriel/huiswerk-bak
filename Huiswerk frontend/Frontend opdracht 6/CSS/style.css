@@ -114,12 +114,12 @@ li a:hover {
 }
 
 .tabel {
-    width: 100%;
+    width: 50%;
     margin-top: 20px;
 }
 
 table {
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
     text-align: left;
 }

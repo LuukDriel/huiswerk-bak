@@ -1,59 +1,151 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:  rgb(161, 161, 161);
+    background-color:  lightgray;
     margin: 0;
     padding: 0;
-    width: 100vw;
-}
-
-ul {
-    list-style-type: none;
-    background-color: rgb(102, 102, 102);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+    height: 100%;
     width: 100%;
 }
 
-li {
-    display: inline;
+/* Styling voor de navagatiebalk */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+}
+
+.topnav a {
     float: left;
+    color: rgb(242, 242, 242);
     text-align: center;
-    border-bottom: 1px solid #555;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-li a:hover {
-    background-color: rgb(139, 139, 139);
+.topnav a:hover {
+    background-color: rgb(221, 221, 221);
+    color: black;
 }
 
-a {
-    display: block;
-    padding: 8px;
-
-    text-align: center;
-}
-
-.active-home {
-    background-color: rgb(102, 102, 102);
+.topnav .active {
+    background-color: rgb(4, 170, 109);
     color: white;
 }
 
-.Home-container {
-    display: flex;
-    justify-items: center;
-    align-content: space-between;
-    width: 88%;
-    height: 100%;
+/* Algemene styling voor de containers */
+.Home-container, .Skill-container .Contact-container {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgrey;
+        width: 96vw;
+        height: 100vh;
+        max-height: 475px;
+        padding: 20px;
+        border: 5px solid gray;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: relative;
 }
 
-.pasfoto {
-    justify-content:
-}
-
+/* Styling voor de tekst op home pagina */
 .Info {
     flex: auto;
     background-color: lightgray;
     width: 200px;
     padding: 50px;
     margin: 20px;
+}
+
+/* Styling voor het contact formulier */
+textarea, input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+/* Styling voor submit knop */
+input[type="submit"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: green;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+}
+
+/* Styling voor de titel van Skills pagina */
+.skill-tekst {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 45%;
+    margin: auto;
+}
+
+/* Styling voor tabel */
+.tabel {
+    display: flex;
+    justify-content: center;
+}
+
+/* Voegt een rand toe aan de tabel */
+table, th, td {
+    border: 1px solid;
+}
+
+/* zet tabel in midden */
+table {
+    padding: 0;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsief ontwerp met mediaquery's */
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .Home-container, .Skill-container, .Contact-container {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+    }
+
+    .Home-container, .Skill-container, .Contact-container {
+        padding: 10px;
+    }
+
+    textarea, input[type="text"], input[type="submit"] {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .skill-tekst {
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+    }
 }
