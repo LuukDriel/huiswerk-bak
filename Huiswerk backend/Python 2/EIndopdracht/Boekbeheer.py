@@ -25,7 +25,7 @@ def boek_zoeken():
             boek_beheer()
     else:
         try:
-            print(boeken_lijst.index(Naam))
+            print(boeken_lijst.index([0]))
         except TypeError:
             print("Geen boek gevonden.")
             boek_zoeken()
