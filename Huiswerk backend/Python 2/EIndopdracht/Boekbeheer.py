@@ -1,37 +1,21 @@
 def boek_toevoegen():
-    global boeken_lijst
-    temp_lijst = []  # Lijst waar alle boeken tijdelijk worden opgeslagen.
+    naamboek = input("Naam boek (Of laat leeg om te stoppen: ")
+    naamauteur = input("Naam auteur: ")
+    jaarboek = input("Jaar: ")
     while True:
-        Naam_boek = input("Naam boek (of typ stop om te stoppen): ")
-        if Naam_boek == "stop":
-            break  # Stopt de functie
-        Naam_auteur = input("Naam auteur: ")
-        Jaar_boek = input("Jaar boek: ")
-
-        # Voegt het boek toe als nieuwe rij.
-        temp_lijst.append([Naam_boek, Naam_auteur, Jaar_boek])
-    boeken_lijst = temp_lijst
+        if naamboek == "":
+            break
+        else:
+            naamboek = input("Naam boek (Of laat leeg om te stoppen: ")
+            naamauteur = input("Naam auteur: ")
+            jaarboek = input("Jaar: ")
+    with open("Boekenlijst.txt", "a") as info:
+        info.write(naamboek, naamauteur, jaarboek)
+        print("Boek opgslagen.")
 
 
 def boek_zoeken():
-    Naam = input("Zoek een boek(of laat leeg om alle boeken te zien: ")
-    if Naam == "":
-        try:
-            print("\nToegevoegde boeken:")
-            for boek in boeken_lijst:
-                print(f"Naam: {boek[0]}, Auteur: {boek[1]}, Jaar: {boek[2]}")
-        except NameError:
-            print("Nog geen boeken toegevoegd")
-            boek_beheer()
-    else:
-        try:
-            print(boeken_lijst.index([0]))
-        except TypeError:
-            print("Geen boek gevonden.")
-            boek_zoeken()
-        except NameError:
-            print("Nog geen boeken toegevoegd")
-            boek_beheer()
+    print("niks")
 
 
 def boek_beheer():
@@ -42,11 +26,10 @@ def boek_beheer():
     2. Boek zoeken
     3. Boek verwijderen
     4. Toon alle boeken
-    5. Opslaan naar bestand
-    6. Inladen van bestand
-    7. Statistieken
-    8. Eenvoudige unit test
-    9. Afsluiten"""
+    5. Inladen van bestand
+    6. Statistieken
+    7. Eenvoudige unit test
+    8. Afsluiten"""
     functie = int(input(f"{opties}\nKies een optie: "))
 
     # Roept de gekozen functie aan.
@@ -61,20 +44,17 @@ def boek_beheer():
         boek_beheer()
     elif functie == 4:
         alle_boeken()
-        boek_beheer
-    elif functie == 5:
-        opslaan_bestand()
         boek_beheer()
-    elif functie == 6:
+    elif functie == 5:
         inladen_bestand()
         boek_beheer()
-    elif functie == 7:
+    elif functie == 6:
         statistieken()
         boek_beheer()
-    elif functie == 8:
+    elif functie == 7:
         unit_test()
         boek_beheer()
-    elif functie == 9:
+    elif functie == 8:
         exit
     else:
         print("Kies een geldige functie")
