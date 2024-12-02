@@ -17,10 +17,10 @@ def boek_zoeken():
     # leest het bestand
     try:
         with open("Boekenlijst.txt", "r") as info:
-            inhoud = info.read()
+            inhoud = info.readlines()
     except FileNotFoundError:
         print("Het bestand bestaat niet")
-        boek_beheer()
+        return
 
     # vraagt welk boek je wilt zoeken
     zoekterm = input("welk boek wil je zoeken(Naam of auteur): ").lower()
@@ -65,15 +65,34 @@ def boek_verwijderen():
         print(f"Boek '{zoekterm}' is verwijderd.")
 
 
-def Boek_alles():
+def boek_alles():
     with open("Boekenlijst.txt", "r") as info:
         try:
             inhoud = info.read()
             print(inhoud)
         except FileExistsError:
             print("Bestand nog niet gemaakt")
-        info.close()
-    boek_beheer()
+
+
+def Lijst_inladen():
+    naambestand = input("Voernaam nieuwe bestand in: ")
+    nieuwbestand = naambestand + ".txt"
+    with open(nieuwbestand, "r") as info:
+        inhoud = info.read()
+    with open("Boekenlijst.txt", "w") as Nieuwinhoud:
+        Nieuwinhoud.write(inhoud)
+
+
+def statistieken():
+    try:
+        with open("Boekenlijst.txt", "r") as info:
+            inhoud = info.readlines()
+            totaal_boeken = len(inhoud)
+            auteurs = {regel.split(",")[1] for regel in inhoud if "," in regel}
+            print(f"Totaal aantal boeken: {totaal_boeken}")
+            print(f"Totaal aantal unieke auteurs: {len(auteurs)}")
+    except FileNotFoundError:
+        print("Bestand betaat niet.")
 
 
 def boek_beheer():
@@ -95,30 +114,34 @@ def boek_beheer():
         boek_beheer
 
     # Roept de gekozen functie aan.
-    if functie == 1:
-        boek_toevoegen()
-        boek_beheer()
-    elif functie == 2:
-        boek_zoeken()
-        boek_beheer()
-    elif functie == 3:
-        boek_verwijderen()
-        boek_beheer()
-    elif functie == 4:
-        Boek_alles()
-        boek_beheer()
-    elif functie == 5:
-        inladen_bestand()
-        boek_beheer()
-    elif functie == 6:
-        statistieken()
-        boek_beheer()
-    elif functie == 7:
-        unit_test()
-        boek_beheer()
-    elif functie == 8:
-        exit
-    else:
+    try:
+        if functie == 1:
+            boek_toevoegen()
+            boek_beheer()
+        elif functie == 2:
+            boek_zoeken()
+            boek_beheer()
+        elif functie == 3:
+            boek_verwijderen()
+            boek_beheer()
+        elif functie == 4:
+            boek_alles()
+            boek_beheer()
+        elif functie == 5:
+            Lijst_inladen()
+            boek_beheer()
+        elif functie == 6:
+            statistieken()
+            boek_beheer()
+        elif functie == 7:
+            unit_test()
+            boek_beheer()
+        elif functie == 8:
+            exit()
+        else:
+            print("Kies een geldige functie")
+            boek_beheer()
+    except UnboundLocalError:
         print("Kies een geldige functie")
         boek_beheer()
 
