@@ -1,0 +1,23 @@
+opdracht 3 html: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactformulier</title>
+    <link rel="stylesheet" href="CSS/opdracht3.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input type="text" id="naam" name="naam" placeholder="Name"><br>
+            <input type="text" id="Phone" name="Phone" placeholder="Phone Number"><br>
+            <input type="text" id="Email" name="Email" placeholder="Email"><br>
+            <textarea form="container-contact" placeholder="Message"></textarea>
+            <button type="submit">Verzenden</button>
+            <p id="errorMessage" class="error"></p>
+        </form>
+        <div id="successMessage" class="success" style="display: none;"></div>
+    </div>
+    <script src="JS/opdracht3.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+#item-list {
+    list-style-type: none;
+    padding: 0;
+}
+#item-list li {
+    background-color: lightblue;
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+}
