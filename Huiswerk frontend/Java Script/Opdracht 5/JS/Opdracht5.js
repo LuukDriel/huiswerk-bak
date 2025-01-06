@@ -1,31 +1,45 @@
-let car = {
-    Merk: "Porsche",
-    Model: "911",
-    Bouwjaar: 2005,
-    kilometerafstand: 10000
+const voertuig = {
+    merk: "Toyota",
+    model: "Corolla",
+    bouwjaar: 2015,
+    kilometerstand: 80000,
 };
+console.log("Voertuig Object:", voertuig);
 
-console.log(car);
-
-class voertuig {
-    constructor(merk, model, bouwjaar, kilometerafstand) {
+class Voertuig {
+    constructor(merk, model, bouwjaar, kilometerstand) {
         this.merk = merk;
         this.model = model;
         this.bouwjaar = bouwjaar;
-        this.kilometerafstand = kilometerafstand;
+        this.kilometerstand = kilometerstand;
     }
-    getName() {
-        return this.merk + " " + this.model;
+
+    updateKilometerstand(nieuweKilometers) {
+        this.kilometerstand += nieuweKilometers;
     }
-    updatekilometerafstand(nieuwkilometer) {
-        this.kilometerafstand += nieuwkilometer;
-    }
+
     voertuigInfo() {
-        return `merk: ${this.merk}, Model: ${this.model}, Bouwjaar: ${this.bouwjaar}, Kilometerafstand: ${this.kilometerafstand}`;
+        return `Merk: ${this.merk}, Model: ${this.model}, Bouwjaar: ${this.bouwjaar}, Kilometerstand: ${this.kilometerstand} km`;
     }
 }
 
-let mijnAuto = new Voertuig("Ford", "Fiesta", 2018, 30000);
-console.log(mijnAuto.voertuigInfo()); // Toont de voertuiginfo
-mijnAuto.updatekilometerafstand(5000); // Update kilometerstand
-console.log(mijnAuto.voertuigInfo()); // Toont bijgewerkte info
+const mijnVoertuig = new Voertuig("Ford", "Fiesta", 2018, 30000);
+console.log("Voertuig Info (voor update):", mijnVoertuig.voertuigInfo());
+
+mijnVoertuig.updateKilometerstand(5000);
+console.log("Voertuig Info (na update):", mijnVoertuig.voertuigInfo());
+
+class ElektrischVoertuig extends Voertuig {
+    constructor(merk, model, bouwjaar, kilometerstand, batterijCapaciteit) {
+        super(merk, model, bouwjaar, kilometerstand);
+        this.batterijCapaciteit = batterijCapaciteit;
+    }
+
+    batterijInfo() {
+        return `Batterijcapaciteit: ${this.batterijCapaciteit} kWh`;
+    }
+}
+
+const mijnElektrischVoertuig = new ElektrischVoertuig("Tesla", "Model 3", 2022, 15000, 75);
+console.log("Elektrisch Voertuig Info:", mijnElektrischVoertuig.voertuigInfo());
+console.log(mijnElektrischVoertuig.batterijInfo());
