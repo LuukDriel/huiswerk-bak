@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luuk's Winkel</title>
+    <!-- Verwijzing naar de CSS -->
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <h1 id="Titel">Welkom bij Luuk's Winkel</h1>
-    <div class="winkel">
-        <h1>Producten</h1>
-        <div class="Laptop">
-            <h2>Laptop</h2>
-            <img src="Assets/Laptop.jfif" alt="Laptop" class="img-laptop">
-            <p>€500</p>
-            <button onclick="Producttoevoegen('Laptop')">Toevoegen</button>
-        </div>
-        <div class="Telefoon">
-            <h2>Telefoon</h2>
-            <p>€300</p>
-            <button onclick="Producttoevoegen('Telefoon')">Toevoegen</button>
-        </div>
-        <div class="Tablet">
-            <h2>Tablet</h2>
-            <p>€200</p>
-            <button onclick="Producttoevoegen('Tablet')">Toevoegen</button>
-        </div>
-    </div>
-    <div class="winkelmand">
-        <!-- Winkelmand is currently empty. Items added to the cart will appear here. -->
-        <p>Uw winkelmand is leeg.</p>
-    </div>
+    <!-- Titel van de winkel -->
+    <header>
+        <h1 id="Titel">Welkom bij Luuk's Winkel</h1>
+    </header>
+
+    <!-- Hoofdcontainer voor de winkel -->
+    <main class="winkel">
+        <!-- Productoverzicht -->
+        <section class="Tekoop section">
+            <h1>Producten</h1>
+        <!-- Laptop -->
+            <div class="Laptop">
+                <h2>Laptop</h2>
+                <img src="Assets/Laptop.jfif" alt="Laptop" class="img-laptop">
+                <p>€500, De nieuwste laptop</p>
+                <input type="number" id="laptop-aantal" value="1" min="1">
+                <button onclick="Producttoevoegen('Laptop')">Toevoegen</button>
+            </div>
+        <!-- Telefoon -->
+            <div class="Telefoon">
+                <h2>Telefoon</h2>
+                <img src="Assets/Telefoon.jfif" alt="Telefoon" class="img-telefoon">
+                <p>€300, De snelste telefoon</p>
+                <input type="number" id="telefoon-aantal" value="1" min="1">
+                <button onclick="Producttoevoegen('Telefoon')">Toevoegen</button>
+            </div>
+        <!-- Tablet -->
+            <div class="Tablet">
+                <h2>Tablet</h2>
+                <img src="Assets/Ipad.jfif" alt="Tablet" class="img-tablet">
+                <p>€200, De beste tablet</p>
+                <input type="number" id="tablet-aantal" value="1" min="1">
+                <button onclick="Producttoevoegen('Tablet')">Toevoegen</button>
+            </div>
+        </section>
+        
+
+        <!-- Winkelmand -->
+<section class="winkelmand section">
+    <h1>Winkelmand</h1>
+    <ul id="winkelmand-items">
+        <li>Uw winkelmand is leeg.</li>
+    </ul>
+    <p id="totaal-prijs">Totaal: €0</p>
+    <button id="afrekenen-btn" onclick="Afrekenen()">Afrekenen</button>
+</section>
+        
+    </main>
+
     <script src="Webwinkel.js"></script>
 </body>
 </html>

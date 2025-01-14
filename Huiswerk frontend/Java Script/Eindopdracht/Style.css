@@ -1,44 +1,91 @@
+/* Algemene opmaak voor de gehele pagina */
 html, body {
     height: 100%;
-    width: auto;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
+/* Titel styling */
 #Titel {
     text-align: center;
-    margin-top: 50px;
+    margin: 50px 0 20px;
 }
 
+/* Winkel layout */
 .winkel {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2%;
+    padding: 5% 10%;
+    flex-wrap: nowrap;
+}
+
+
+/* Algemene stijl voor secties zoals .Tekoop en .winkelmand */
+.section {
+    display: flex;
     flex-direction: column;
-    height: auto;
-    width: 50%;
-    margin-top: 5%;
-    margin-left: 10%;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 15px;
+    width: 45%;
+    background-color: #fff;
 }
 
-.img-laptop {
-    width: 20%;
-    height: auto;
+/* Producten styling */
+.Laptop, .Telefoon, .Tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-h1 {
+/* Afbeeldingen styling */
+.img-laptop, .img-telefoon, .img-tablet {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Koptekst styling */
+h1, h2 {
     color: #000;
-    font-size: 30px;
-    font-weight: bold;
     margin: 0;
     padding: 0;
 }
 
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 h2 {
-    color: #000;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* Knop styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
 }
