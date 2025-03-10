@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/Style.css">
+
+</head>
+<body>
+    <nav class="topnav">
+        <a href="../Index.html">Home</a>
+        <a class="active" href="Menu.html">Menu</a>
+        <a href="Contact.html">Contact</a>
+        <h1 id="Titel">Delicious Bites</h1>
+
+        <!-- Winkelmandje dropdown -->
+        <div class="cart-dropdown" id="cart-dropdown">
+            <h5>Your Cart</h5>
+            <ul id="cart-items">
+                <!-- Bestelde items -->
+            </ul>
+            <p class="cart-total">Total: €0.00</p>
+            <!-- Bestel-knop -->
+            <button class="btn btn-primary" id="checkout-btn">Bestel</button>
+        </div>
+    </nav>
+    
+    <main class="container mt-4">
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" id="eten-tab" data-bs-toggle="pill" href="#eten">Eten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="dranken-tab" data-bs-toggle="pill" href="#dranken">Dranken</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="tab-content mt-3">
+
+            <!-- Eten Tab -->
+            <div class="tab-pane fade show active" id="eten">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../Assets/Hamburger.jfif" class="card-img-top" alt="Hamburger">
+                            <div class="card-body">
+                                <h5 class="card-title">Hamburger</h5>
+                                <p class="card-text">Een heerlijke hamburger met sla, tomaat en kaas.</p>
+                                <p class="card-price">€7.50</p>
+                                <button class="btn btn-success add-to-cart" data-item="Hamburger" data-price="7.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../Assets/Tosti.jfif" class="card-img-top" alt="Tosti">
+                            <div class="card-body">
+                                <h5 class="card-title">Tosti</h5>
+                                <p class="card-text">Keuze tussen ham-kaas tostie of een kaas tosti.</p>
+                                <p class="card-price">€5.00</p>
+                                <button class="btn btn-success add-to-cart" data-item="Tosti" data-price="5.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../Assets/Pannekoek.jfif" class="card-img-top" alt="Pannekoek">
+                            <div class="card-body">
+                                <h5 class="card-title">Pannekoek</h5>
+                                <p class="card-text">Een lekkere pannekoek met stroop of suiker.</p>
+                                <p class="card-price">€4.50</p>
+                                <button class="btn btn-success add-to-cart" data-item="Pannekoek" data-price="4.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img id="soep" src="../Assets/Tomatensoep.jfif" class="card-img-top" alt="Tomatensoep">
+                            <div class="card-body">
+                                <h5 class="card-title">Soep</h5>
+                                <p class="card-text">Een overheerlijke tomatensoep met brood.</p>
+                                <p class="card-price">€6.00</p>
+                                <button class="btn btn-success add-to-cart" data-item="Soep" data-price="6.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img id="steak" src="../Assets/Steak.jfif" class="card-img-top" alt="Steak met patat">
+                            <div class="card-body">
+                                <h5 class="card-title">Steak met patat</h5>
+                                <p class="card-text">Een steak van een koe met lekkere patat en saus naar keuze.</p>
+                                <p class="card-price">€12.50</p>
+                                <button class="btn btn-success add-to-cart" data-item="Steak met patat" data-price="12.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Sluit de Eten-tab -->
+
+            <!-- Dranken Tab -->
+            <div class="tab-pane fade" id="dranken">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../Assets/Koffie.jfif" class="card-img-top" alt="Koffie">
+                            <div class="card-body">
+                                <h5 class="card-title">Koffie</h5>
+                                <p class="card-text">Een warme kop koffie met melk en suiker naar keuze.</p>
+                                <p class="card-price">€2.50</p>
+                                <button class="btn btn-success add-to-cart" data-item="Koffie" data-price="2.50">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../Assets/Thee.jfif" class="card-img-top" alt="Thee">
+                            <div class="card-body">
+                                <h5 class="card-title">Thee</h5>
+                                <p class="card-text">Een kopje thee in verschillende smaken.</p>
+                                <p class="card-price">€2.00</p>
+                                <button class="btn btn-success add-to-cart" data-item="Thee" data-price="2.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="../Assets/Sinaasappelsap.jfif" class="card-img-top" alt="Sinaasappelsap">
+                            <div class="card-body">
+                                <h5 class="card-title">Sinaasappelsap</h5>
+                                <p class="card-text">Vers geperste sinaasappelsap, heerlijk verfrissend!</p>
+                                <p class="card-price">€3.00</p>
+                                <button class="btn btn-success add-to-cart" data-item="Sinaasappelsap" data-price="3.00">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Sluit de Dranken-tab -->
+        </div> <!-- Sluit de tab-content -->
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../JS/Winkel.JS"></script>
+</body>
+</html>
