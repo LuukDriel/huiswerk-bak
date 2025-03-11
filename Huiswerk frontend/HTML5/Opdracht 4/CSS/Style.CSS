@@ -47,6 +47,44 @@ body {
     padding-right: 5%;
 }
 
+#eten-tab, #dranken-tab {
+    transition: transform 0.5s ease-out;
+}
+
+#eten-tab:hover, #dranken-tab:hover {
+    transform: scaleX(1.1) scaleY(1.1);
+    transition: transform 0.5s ease-out;
+}
+
+/* Winkelmandje */
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px;
+    width: 250px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1050;
+    transition: all 0.5s ease-in-out;
+}
+
+.cart-item {
+    font-size: 14px;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+.cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 /* Styling voor het contact formulier */
 textarea, input[type="text"] {
     width: 100%;
@@ -80,28 +118,21 @@ input[type="submit"] {
     justify-content: center;
 }
 
-        /* Winkelmandje */
-        .cart-dropdown {
-            display: none;
-            position: absolute;
-            top: 50px;
-            right: 20px;
-            border: 1px solid #ccc;
-            background-color: white;
-            padding: 10px;
-            width: 250px;
-            max-height: 300px;
-            overflow-y: auto;
-            z-index: 1050;
-        }
-        .cart-item {
-            font-size: 14px;
-        }
-        .cart-item p {
-            margin: 0;
-        }
-        .cart-total {
-            font-weight: bold;
-            margin-top: 10px;
-        }
+/* Additional styling for welcome section */
+.welcome-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
 
+.welcome-section h2 {
+    color: #343a40;
+}
+
+.welcome-section p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
