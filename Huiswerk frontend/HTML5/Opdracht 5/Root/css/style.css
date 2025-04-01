@@ -1,13 +1,33 @@
 body {
     height: 100vh;
     width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
     background: 
     linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), 
     url("../imagesone.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+main {
+    padding: 2rem;
+}
+
+article {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #6f4e37;
 }
 
 .half-circle {
