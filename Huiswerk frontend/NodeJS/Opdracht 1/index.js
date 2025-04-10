@@ -1,5 +1,12 @@
+import express from 'express';
 import chalk from 'chalk';
+const app = express();
+const port = 3000;
 
-console.log(chalk.blue('Dit is blauwe tekst'));
-console.log(chalk.red('Dit is rode tekst'));
-console.log(chalk.green('Dit is groene tekst'));
+app.get('/', (req, res) => {
+    res.send('Hallo vanaf de Node-server!');
+});
+
+app.listen(port, () => {
+    console.log(chalk.green(`Server is running on http://localhost:${port}`));
+});
